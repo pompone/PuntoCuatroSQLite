@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PuntoCuatro.Models
+namespace PuntoCuatroSQLite.Models
 {
     public class Muestra
     {
@@ -20,4 +20,5 @@ namespace PuntoCuatro.Models
         public List<Ensayo> Ensayos { get; set; } = new();
     }
 }
+
 
