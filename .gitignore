@@ -1,0 +1,14 @@
+# Visual Studio / build
+.vs/
+bin/
+obj/
+out/
+
+# Archivos de usuario de VS
+*.csproj.user
+*.suo
+
+# Bases SQLite
+*.db
+*.sqlite
+*.sqlite3
