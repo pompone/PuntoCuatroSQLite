@@ -1,0 +1,53 @@
+﻿@model PuntoCuatroSQLiteSQLite.Models.Muestra
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="mb-2">Cargar una nueva ...</h1>
+<h4 class="text-muted">Muestra</h4>
+<hr />
+
+<div class="row">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <div class="card shadow-lg border-0 rounded-3 mb-4 bg-white ensayo-card">
+            <div class="card-body p-4 p-lg-5">
+                <form asp-action="Create" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="Nombre" class="form-label"></label>
+                        <input asp-for="Nombre" class="form-control form-control-lg" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Matriz" class="form-label"></label>
+                        <input asp-for="Matriz" class="form-control form-control-lg" />
+                        <span asp-validation-for="Matriz" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="FechaToma" class="form-label"></label>
+                        <input asp-for="FechaToma" type="date" class="form-control form-control-lg" />
+                        <span asp-validation-for="FechaToma" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                        <button type="button" class="btn btn-success btn-lg" onclick="history.back()">Volver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
