@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PuntoCuatro.Data;
+using PuntoCuatroSQLite.Data;
 
 #nullable disable
 
@@ -85,3 +85,4 @@ namespace PuntoCuatroSQLite.Migrations
         }
     }
 }
+
