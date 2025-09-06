@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PuntoCuatro.Models;
+using PuntoCuatroSQLite.Models;
 
 namespace PuntoCuatro.Controllers
 {
@@ -30,3 +30,4 @@ namespace PuntoCuatro.Controllers
         }
     }
 }
+
