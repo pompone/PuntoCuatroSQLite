@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using PuntoCuatro.Data; // <-- donde vive LaboratorioContext
+using PuntoCuatroSQLite.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-// --- conexiÛn SQLite ---
+// --- conexi√≥n SQLite ---
 var dbPath = Path.Combine(builder.Environment.ContentRootPath, "app.db");
-// si querÈs usar siempre el de appsettings.json, podÈs dejar solo la lÌnea siguiente:
+// si quer√©s usar siempre el de appsettings.json, pod√©s dejar solo la l√≠nea siguiente:
 // builder.Services.AddDbContext<LaboratorioContext>(options =>
 //     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<LaboratorioContext>(options =>
@@ -21,7 +21,7 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<LaboratorioContext>();
     db.Database.Migrate();
 
-    // SEED opcional: datos de prueba si la base est· vacÌa
+    // SEED opcional: datos de prueba si la base est√° vac√≠a
     if (!db.Muestras.Any())
     {
         var mu = new PuntoCuatro.Models.Muestra
@@ -60,4 +60,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
 
