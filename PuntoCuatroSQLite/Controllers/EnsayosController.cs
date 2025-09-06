@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PuntoCuatro.Data;
+using PuntoCuatroSQLite.Data;
 using PuntoCuatro.Models;
 
 namespace PuntoCuatro.Controllers
@@ -162,3 +162,4 @@ namespace PuntoCuatro.Controllers
         }
     }
 }
+
