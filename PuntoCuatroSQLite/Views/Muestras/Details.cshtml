@@ -1,0 +1,42 @@
+﻿@model PuntoCuatro.Models.Muestra
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="mb-2">Ver</h1>
+<h4 class="text-muted">Muestra</h4>
+<hr />
+
+<div class="row">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <div class="card shadow-lg border-0 rounded-3 ensayo-card">
+            <div class="card-body p-4 p-lg-5">
+
+                <dl class="row gy-2">
+                    <dt class="col-sm-3">Nombre</dt>
+                    <dd class="col-sm-9">@Model.Nombre</dd>
+
+                    <dt class="col-sm-3">Matriz</dt>
+                    <dd class="col-sm-9">@Model.Matriz</dd>
+
+                    <dt class="col-sm-3">Fecha de toma</dt>
+                    <dd class="col-sm-9">@Model.FechaToma.ToString("dd/MM/yyyy")</dd>
+                </dl>
+
+                <div class="d-flex gap-2 mt-4">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-lg">Editar</a>
+                    <a asp-action="Index" class="btn btn-success btn-lg">Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
