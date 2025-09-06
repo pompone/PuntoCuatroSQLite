@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PuntoCuatro.Models
+namespace PuntoCuatroSQLite.Models
 {
     public class Ensayo
     {
@@ -26,3 +26,4 @@ namespace PuntoCuatro.Models
         public DateTime Fecha { get; set; } = DateTime.Now;
     }
 }
+
